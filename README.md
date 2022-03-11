@@ -15,7 +15,7 @@ This is a simple API by which will set the currency code(USD, EUR, BDT) as a par
 To create the API (/getBitcoinInfo), you need to set environment for Nodejs, and you must follow the steps below:</br>
 
 **Step 1: Clone this repo by:** </br>
-```git clone https://github.com/mdmuhtasimfuadfahim/coindesk_test_api```
+```git clone https://github.com/mdmuhtasimfuadfahim/coindesk-test-api```
 </br>
 
 **Step 2: Change PORT according to your preference or leave it as it is.**
