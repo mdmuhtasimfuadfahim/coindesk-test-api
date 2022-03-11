@@ -22,7 +22,7 @@ To create the API (/getBitcoinInfo), you need to set environment for Nodejs, and
 
 **Step 3: From the root directory, run the commands:**</br>
   ```yarn install``` </br>
-  ```yarn start```</br>
+  ```yarn serve```</br>
 </br>**The API will start and you can send request and get response**</br>
 
 
