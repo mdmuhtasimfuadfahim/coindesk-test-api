@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+.DS_Store
+
+# Yarn lock file
+yarn.lock
+
+# dotenv environment variable file
+.env
