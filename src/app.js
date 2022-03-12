@@ -21,10 +21,10 @@ app.use(bodyParser.json());
 
 
 app.get('/getBitcoinInfo', async (req, res) =>{
-    const getCurrencyCode = req.query.currency;
+    // const getCurrencyCode = req.query.currency;
 
     // GET/HEADER is not allowed to have body, query strings are allowd!!
-    // const getCurrencyCode = req.body.currency;
+    const getCurrencyCode = req.body.currency;
     try {
         // check whether user gives a right currency
         if(getCurrencyCode === undefined || getCurrencyCode === '' ){
