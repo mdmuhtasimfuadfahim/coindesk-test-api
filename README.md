@@ -8,8 +8,8 @@ This is a simple API by which will set the currency code(USD, EUR, BDT) as a par
 * The highest Bitcoin rate in the last 30 days, in the requested currency.</br>
 
 ## Tools and Technologies:
-  * Node
-  * NPM / Yarn
+  * <a href="https://nodejs.org/en/">Node.js</a>
+  * MPM (it is automatically installed with node) / <a href="https://yarnpkg.com/">Yarn</a>
 
 ## Getting Started
 To create the API (/getBitcoinInfo), you need to set environment for Nodejs, and you must follow the steps below:</br>
@@ -29,5 +29,5 @@ To create the API (/getBitcoinInfo), you need to set environment for Nodejs, and
 **From the root directory run the commad:**</br>
 ``yarn test``
 
-**Note: Please use the line: ``const getCurrencyCode = req.query.currency;`` in app.js file if you want to give query request from the API**
+**Note: Please use the line: ``const getCurrencyCode = req.query.currency;`` in app.js file if you want to give query request from the API**</br>
 ###### Thank you
