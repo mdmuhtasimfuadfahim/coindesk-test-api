@@ -4,8 +4,8 @@
 
 This is a simple API by which will set the currency code(USD, EUR, BDT) as a parameter in the request query and in return user will get the following information in response:</br>
 * The current Bitcoin rate, in the requested currency.</br>
-* The lowest Bitcoin rate in the last 30 days, in the requested currency.</br>
-* The highest Bitcoin rate in the last 30 days, in the requested currency.</br>
+* The lowest Bitcoin rate and date in the last 30 days, in the requested currency.</br>
+* The highest Bitcoin rate and date in the last 30 days, in the requested currency.</br>
 
 ## Tools and Technologies:
   * <a href="https://nodejs.org/en/">Node.js</a>
