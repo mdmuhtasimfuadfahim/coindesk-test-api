@@ -21,10 +21,10 @@ app.use(bodyParser.json());
 
 
 app.get('/getBitcoinInfo', async (req, res) =>{
-    // const getCurrencyCode = req.query.currency;
+    const getCurrencyCode = req.query.currency;
 
     // GET/HEADER is not allowed to have body, query strings are allowd!!
-    const getCurrencyCode = req.body.currency;
+    // const getCurrencyCode = req.body.currency;
     try {
         // check whether user gives a right currency
         if(getCurrencyCode === undefined || getCurrencyCode === '' ){
@@ -40,14 +40,18 @@ app.get('/getBitcoinInfo', async (req, res) =>{
             const coindeskHistoricalPrice = await fetch(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${start_date.format('YYYY-MM-DD')}&end=${end_date.format('YYYY-MM-DD')}&currency=${getCurrencyCode}`);
             const obj2 = await coindeskHistoricalPrice.json();
         
-            let maxRate = -Infinity;
-            let minRate = Infinity
+            let maxRate = rate_float;
+            let minRate = rate_float;
+            let maxRateDate = '';
+            let minRateDate = '';
             for(prop in obj2.bpi) {
                 if(obj2.bpi[prop] > maxRate) {
                     maxRate = obj2.bpi[prop];
+                    maxRateDate = prop;
                 }
                 if(obj2.bpi[prop] < minRate) {
-                    minRate = obj2.bpi[prop]
+                    minRate = obj2.bpi[prop];
+                    minRateDate = prop;
                 }
             }
 
@@ -55,12 +59,16 @@ app.get('/getBitcoinInfo', async (req, res) =>{
             const response = {
                 rate_float: rate_float,
                 maxRate: maxRate,
+                maxRateDate: maxRateDate,
                 minRate: minRate,
+                minRateDate: minRateDate,
                 currency: getCurrencyCode.toUpperCase(),
                 message: "Thank you for using my API"
             };
 
+            console.table(response);
             // send response
+            res.status(200);
             res.send(response);
         }
     } catch (error) {
