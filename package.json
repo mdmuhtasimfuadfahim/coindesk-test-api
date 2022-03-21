@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon src/app.js",
     "serve": "node src/app.js",
-    "test" : "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest"
   },
   "dependencies": {
     "body-parser": "^1.19.2",
