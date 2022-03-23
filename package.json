@@ -10,6 +10,10 @@
     "serve": "node src/app.js",
     "test": "./node_modules/.bin/jest"
   },
+  "engines": {
+    "node": "^17.4.0",
+    "npm": "^8.5.5" 
+  },
   "dependencies": {
     "body-parser": "^1.19.2",
     "dotenv": "^16.0.0",
