@@ -6,6 +6,6 @@ it('should return status 400', ()=> {
 });
 
 it('should return status 200 with json response', ()=> {
-    return frisby.fetch('http://localhost:4040/getBitcoinInfo', {"currency": "usd"})
+    return frisby.fetch('http://localhost:4040/getBitcoinInfo?currency=bdt')
     .expect('status', 200);
 });
