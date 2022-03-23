@@ -39,7 +39,8 @@ app.get('/getBitcoinInfo', async (req, res) =>{
             // fetch highest and lowest price of bitcoin
             const coindeskHistoricalPrice = await fetch(`https://api.coindesk.com/v1/bpi/historical/close.json?start=${start_date.format('YYYY-MM-DD')}&end=${end_date.format('YYYY-MM-DD')}&currency=${getCurrencyCode}`);
             const obj2 = await coindeskHistoricalPrice.json();
-        
+            const description = `This prints the highest and lowest price within the date between ${end_date.format('YYYY-MM-DD')} and ${start_date.format('YYYY-MM-DD')}`;
+
             let maxRate = rate_float;
             let minRate = rate_float;
             let maxRateDate = '';
@@ -63,6 +64,7 @@ app.get('/getBitcoinInfo', async (req, res) =>{
                 minRate: minRate,
                 minRateDate: minRateDate,
                 currency: getCurrencyCode.toUpperCase(),
+                description: description,
                 message: "Thank you for using my API"
             };
 
